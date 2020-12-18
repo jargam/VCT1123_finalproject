@@ -3,15 +3,807 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stanley's</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Ornama©</title>
+
+
+    <script type="text/javascript" src="../jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+    /*(3 functions for clicking the Food, Happy Hour, and Locations buttons)*/
+       $(function() {
+           $("#btn1").click(function() {
+               $("#main").hide("fast");
+               $("#menu").fadeIn("slow");
+           });
+           console.log("displaying menu options")
+       });
+       $(function() {
+            $("#btn2").click(function() {
+               $("#main").hide("fast");
+               $("#hhour").fadeIn("slow");
+           });
+           console.log("displaying happy hour options")
+       });  
+       $(function() {
+            $("#btn3").click(function() {
+               $("#main").hide("fast");
+               $("#locations").fadeIn("slow");
+           });
+           console.log("displaying hibachi options")
+       });
+       /*(3 functions in the food tab for clicking the Sushi, Appetizer and Hibachi buttons)*/
+       $(function() {
+           $("#btn1.menubtn").click(function() {
+               $("#menu").fadeOut("fast");
+               $("#sushimenu").show("slow");
+           });
+           console.log("showing sushi menu")
+       });
+       $(function() {
+            $("#btn2.menubtn").click(function() {
+               $("#menu").fadeOut("fast");
+               $("#appmenu").show("slow");
+           });
+           console.log("showing appetizer menu")
+       });  
+       $(function() {
+            $("#btn3.menubtn").click(function() {
+               $("#menu").fadeOut("fast");
+               $("#hibachimenu").show("slow");
+           });
+           console.log("showing hibachi menu")
+       });
+       /*(3 functions showing the sushi rolls & (3 more) making the pictures larger with a function )*/
+        $(function() {
+           $("#btn1.roll").click(function() {
+               $("#sushimenu").hide("fast");
+               $("#caliroll").show("slow");
+           });
+           console.log("showing california roll")
+        });
+        $(function() {
+            $("#infobtn.calirollinfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#calirollinfo").show("slow");
+            });
+        });
+        //////***end of cali roll functions***//////
+       $(function() {
+           $("#btn2.roll").click(function() {
+               $("#sushimenu").hide("fast");
+               $("#veggieroll").show("slow");
+           });
+           console.log("showing california roll")
+       });  
+       $(function() {
+            $("#infobtn.vegrollinfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#vegrollinfo").show("slow");
+            });
+        });
+        //////***end of veggie roll functions***///////
+       $(function() {
+           $("#btn3.roll").click(function() {
+               $("#sushimenu").hide("fast");
+               $("#spicytuna").show("slow");
+           });
+           console.log("showing california roll")
+       });
+       $(function() {
+            $("#infobtn.tunarollinfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#tunarollinfo").show("slow");
+            });
+        });
+        //////***end of spicy tuna functions*//////
+       /*(6 functions for showing app menu info when button is clicked)*/
+       $(function() {
+           $("#btn1.app").click(function() {
+               $("#appmenu").hide("fast");
+               $("#pork").show("slow");
+           });
+           console.log("showing info for pork dumplings")
+        });
+        $(function() {
+            $("#infobtn.dumplinginfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#dumplinginfo").show("slow");
+            });
+        });
+        //////***(end of dumpling functions)***//////
+        $(function() {
+           $("#btn2.app").click(function() {
+               $("#appmenu").hide("fast");
+               $("#edamame").show("slow");
+           });
+           console.log("showing info for edamame")
+        });
+        $(function() {
+            $("#infobtn.edamameinfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#edamameinfo").show("slow");
+            });
+        });
+        //////***(end of edamame functions)***//////
+        $(function() {
+           $("#btn3.app").click(function() {
+               $("#appmenu").hide("fast");
+               $("#miso").show("slow");
+           });
+           console.log("showing info for miso soup")
+        });
+        $(function() {
+            $("#infobtn.misoinfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#misoinfo").show("slow");
+            });
+        });
+        //////***(end of miso functions)***//////
+        $(function() {
+           $("#btn4.app").click(function() {
+               $("#appmenu").hide("fast");
+               $("#calamari").show("slow");
+           });
+           console.log("showing info for calamari")
+        });
+        $(function() {
+            $("#infobtn.calamariinfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#calamariinfo").show("slow");
+            });
+        });
+         //////***(end of calamari functions)***//////
+        $(function() {
+           $("#btn5.app").click(function() {
+               $("#appmenu").hide("fast");
+               $("#salad").show("slow");
+           });
+           console.log("showing info for seaweed salad")
+        });
+        $(function() {
+            $("#infobtn.saladinfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#saladinfo").show("slow");
+            });
+        });
+        //////***(end of salad functions)***//////
+        $(function() {
+           $("#btn6.app").click(function() {
+               $("#appmenu").hide("fast");
+               $("#egg").show("slow");
+           });
+           console.log("showing info for the eggrolls")
+        });
+        $(function() {
+            $("#infobtn.egginfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#egginfo").show("slow");
+            });
+        });
+         //////***(end of eggroll functions)***//////
+       /*(3 options for showing hibachi menu info when button is clicked)*/
+       $(function() {
+           $("#btn1.grill").click(function() {
+               $("#hibachimenu").hide("fast");
+               $("#chicken").show("slow");
+           });
+           console.log("showing info for hibachi chicken")
+        });
+        $(function() {
+            $("#infobtn.chickeninfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#chickeninfo").show("slow");
+            });
+        });
+        //////***(end of chicken functions)***//////
+        $(function() {
+           $("#btn2.grill").click(function() {
+               $("#hibachimenu").hide("fast");
+               $("#steak").show("slow");
+           });
+           console.log("showing info for hibachi steak")
+        });
+        $(function() {
+            $("#infobtn.steakinfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#steakinfo").show("slow");
+            });
+        });
+        //////***(end of steak functions)***//////
+        $(function() {
+           $("#btn3.grill").click(function() {
+               $("#hibachimenu").hide("fast");
+               $("#shrimp").show("slow");
+           });
+           console.log("showing info for hibachi shrimp")
+        });
+        $(function() {
+            $("#infobtn.shrimpinfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#shrimpinfo").show("slow");
+            });
+        });
+        //////***(end of shrimp functions)***//////
+        /*(2 functions in the happy hour tab for clicking snacks or drinks)*/
+       $(function() {
+           $("#btn1.hhbtn").click(function() {
+               $("#hhour").fadeOut("fast");
+               $("#drinks").show("slow");
+           });
+           console.log("showing happy hour drink options")
+       });
+       $(function() {
+            $("#btn2.hhbtn").click(function() {
+               $("#hhour").fadeOut("fast");
+               $("#snacks").show("slow");
+           });
+           console.log("showing happy hour drink specials")
+       });  
+       /*(3 functions for drink specials on beer, wine and rails)*/
+       $(function() {
+           $("#btn1.drinks").click(function() {
+               $("#drinks").hide("fast");
+               $("#beer").show("slow");
+           });
+           console.log("showing info for beer specials")
+        });
+        $(function() {
+            $("#infobtn.beerinfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#beerinfo").show("slow");
+            });
+        });
+        //////***(end of beer functions)***//////
+        $(function() {
+           $("#btn2.drinks").click(function() {
+               $("#drinks").hide("fast");
+               $("#rails").show("slow");
+           });
+           console.log("showing info for rail specials")
+        });
+        $(function() {
+            $("#infobtn.railinfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#railinfo").show("slow");
+            });
+        });
+        //////***(end of rail functions)***//////
+        $(function() {
+           $("#btn3.drinks").click(function() {
+               $("#drinks").hide("fast");
+               $("#wine").show("slow");
+           });
+           console.log("showing info for wine specials")
+        });
+        $(function() {
+            $("#infobtn.wineinfo").click(function() {
+                $("figure").animate({left:"900px"}, 1000, "swing");
+                $("#wineinfo").show("slow");
+            });
+        });
+        //////***(end of wine functions)***//////
+       /*(3 functions for clicking NYC, LA or MIA)*/
+       $(function() {
+           $("#btn1.cities").click(function() {
+               $("#locations").fadeTo(0, 0.0).hide("fast");
+               $("#nyc").fadeTo(800, 1.0);
+           });
+           console.log("showing NYC location")
+       });
+       $(function() {
+            $("#btn2.cities").click(function() {
+               $("#locations").fadeTo(0, 0.0).hide("fast");
+               $("#la").fadeTo(800, 1.0);
+           });
+           console.log("showing LA location")
+       });  
+       $(function() {
+            $("#btn3.cities").click(function() {
+               $("#locations").fadeTo(0, 0.0).hide("fast");
+               $("#mia").fadeTo(800, 1.0);
+           });
+           console.log("showing miami location")
+       });
+       /*(adding css using jquery traverse functions)*/
+       $("document").ready(function() {
+            $("header").children().css("font-style", "italic")
+                                  .css("font-size","60px")
+                                  .css("text-align", "center")
+       });
+    </script>
+
+
+
 </head>
 <body>
+    <div id="content">
+        <header>
+            <h1>Welcome to Ornama©</h1>
+        </header>
+        <section>
+            <!--main content div-->
+            <div id="main">
+            <h2>Click on an image below to see more details!</h2>
+            <!--buttons/images for main options on index menu-->
+                <figure style="position: absolute;; left:170px; top:300px;">
+                    <img alt="sushi" src="images/sushi.jpg" width="200px" height="150px;">
+                    <figcaption><button id="btn1" >Food</figcaption>
+                </figure>
+                <figure style="position: absolute;; left:550px; top:300px;">
+                    <img alt="happyhour" src="images/hh.jpg" width="200px" height="150px;">
+                    <figcaption><button id="btn2">Happy Hour</figcaption>
+                </figure>
+                <figure style="position: absolute;; right:170px; top:300px;">
+                    <img alt="locations" src="images/patio.jpg" width="200px" height="150px;">
+                    <figcaption><button id="btn3">Locations</figcaption>
+                </figure>
+            </div>
+            <!--menu for the food tab (sushi, apps, hibachi-->
+            <div id="menu">
+                <h2>Welcome to our menu!</h2>
+                <figure style="position: absolute; left:50px; top:300px;">
+                    <img alt="sushi" src="images/sushi.jpg" width="200px" height="150px;">
+                    <figcaption><button class="menubtn" id="btn1">Sushi</figcaption>
+                </figure>
+                <figure style="position: absolute;; left:500px; top:300px;">
+                    <img alt="soup" src="images/miso.jpg" width="200px" height="150px;">
+                    <figcaption><button class="menubtn" id="btn2">Appetizers</figcaption>
+                </figure>
+                <figure style="position: absolute;; right:170px; top:300px;">
+                    <img alt="hibachi" src="images/hibachi.jpg" width="200px" height="150px;">
+                    <figcaption><button class ="menubtn" id="btn3">Hibachi</figcaption>
+                </figure>
+                <!--sushi menu div part of food tab-->
+                </div>
+                <!--div for main sushi menu-->
+                <div id="sushimenu">
+                    <h2>Sushi Menu</h2>
+                    <figure style="position: absolute;; left:50px; top:300px;">
+                        <img alt="cali roll" src="images/cali.jpg" width="200px" height="150px;"><figcaption><button id="btn1" class="roll">California roll</button></figcaption>
+                    </figure>
+                    <figure style="position: absolute;; left:500px; top:300px;">
+                        <img alt="veggie roll" src="images/veggie.jpg" width="200px" height="150px;">
+                        <figcaption><button id="btn2" class="roll">Veggie roll</button></figcaption>
+                    </figure>
+                    <figure style="position: absolute; right:170px; top:300px;">
+                        <img alt="spicy tuna roll" src="images/tuna.jpg" width="200px" height="150px;">
+                        <figcaption><button id="btn3" class="roll">Spicy Tuna roll</button></figcaption>
+                    </figure>
+                </div>
+                <!--divs for roll buttons showing info-->
+                <div id="caliroll">
+                    <h2>Click on the image to see pricing and ingredients</h2>
+                    <figure style="position: absolute; left:50px; top:300px;">
+                    <img src="images/cali.jpg" width="200px" height="150px">
+                    <figcaption><button id="infobtn" class="calirollinfo">Price/Info</button></figcaption>
+                    </figure>
+                </div>
+                <div id="calirollinfo" style="position: absolute; left:50px; top:300px;">
+                    <h3>California Roll</h3>
+                    <p>11.25$</p>
+                    <h3>Info</h3>
+                    <p>Avacado, rice, seaweed, crab, cucumber</p>
+                </div>
+                <div id="veggieroll">
+                    <h2>Click on the image to see pricing and ingredients</h2>
+                    <figure style="position: absolute; left:50px; top:300px;">
+                    <img src="images/veggie.jpg" width="200px" height="150px">
+                    <figcaption><button id="infobtn" class="vegrollinfo">Price/Info</button></figcaption>
+                    </figure>
+                </div>
+                <div id="vegrollinfo" style="position: absolute; left:50px; top:300px;">
+                    <h3>Vegetable Roll</h3>
+                    <p>8.25$</p>
+                    <h3>Info</h3>
+                    <p>Avacado, rice, seaweed, carrots, cucumber</p>
+                </div>
+                <div id="spicytuna">
+                    <h2>Click on the image to see pricing and ingredients</h2>
+                    <figure style="position: absolute; left:50px; top:300px;">
+                    <img src="images/tuna.jpg" width="200px" height="150px">
+                    <figcaption><button id="infobtn" class="tunarollinfo">Price/Info</button></figcaption>
+                    </figure>
+                </div>
+                <div id="tunarollinfo" style="position: absolute; left:50px; top:300px;">
+                    <h3>Spicy Tuna Roll</h3>
+                    <p>15.25$</p>
+                    <h3>Info</h3>
+                    <p>Rice, seaweed, raw tuna, spicy mayo</p>
+                </div>
+                <!--div for appetizer menu-->
+                <div id="appmenu">
+                    <h2>Appetizers</h2>
+                    <figure style="position: absolute;; left:50px; top:200px;">
+                        <img alt="pork dumplings" src="images/dumpling.jpg" width="200px" height="150px;"><figcaption><button id="btn1" class="app">Pork Dumplings</button></figcaption>
+                    </figure>
+                    <figure style="position: absolute;; left:500px; top:200px;">
+                        <img alt="edamame" src="images/edamame.jpg" width="200px" height="150px;">
+                        <figcaption><button id="btn2" class="app">Edamame</button></figcaption>
+                    </figure>
+                    <figure style="position: absolute;; right:170px; top:200px;">
+                        <img alt="miso" src="images/miso.jpg" width="200px" height="150px;">
+                        <figcaption><button id="btn3" class="app">Miso Soup</button></figcaption>
+                    </figure>
+                    <figure style="position: absolute;; left:50px; bottom:100px;">
+                        <img alt="calamari" src="images/calamari.jpg" width="200px" height="150px;"><figcaption><button id="btn4" class="app">Calamari</button></figcaption>
+                    </figure>
+                    <figure style="position: absolute;; left:500px; bottom:100px;">
+                        <img alt="seaweed salad" src="images/sea.jpg" width="200px" height="150px;">
+                        <figcaption><button id="btn5" class="app">Seaweed Salad</button></figcaption>
+                    </figure>
+                    <figure style="position: absolute;; right:170px; bottom:100px;">
+                        <img alt="eggrolls" src="images/eggroll.jpeg" width="200px" height="150px;">
+                        <figcaption><button id="btn6" class="app">Eggrolls</button></figcaption>
+                    </figure>
+                </div>
+                 <!--divs for all the appetizers showing info-->
+                <div id="pork">
+                    <h2>Click on the image to see pricing and ingredients</h2>
+                <figure style="position: absolute; left:50px; top:300px;">
+                    <img src="images/dumpling.jpg" width="200px" height="150px">
+                    <figcaption><button id="infobtn" class="dumplinginfo">Price/Info</button></figcaption>
+                </figure>
+                </div>
+                <div id="dumplinginfo" style="position: absolute; left:50px; top:300px;">
+                    <h3>Pork Dumplings</h3>
+                    <p>10.95$</p>
+                    <h3>Info</h3>
+                    <p>Ground pork, fresh ginger, and cabbage wrapped in dumpling wrappers</p>
+                </div>
+                <!--end of dumpling divs-->
+                <div id="edamame">
+                    <h2>Click on the image to see pricing and ingredients</h2>
+                    <figure style="position: absolute; left:50px; top:300px;">
+                    <img src="images/edamame.jpg" width="200px" height="150px">
+                    <figcaption><button id="infobtn" class="edamameinfo">Price/Info</button></figcaption>
+                    </figure>
+                </div>
+                <div id="edamameinfo" style="position: absolute; left:50px; top:300px;">
+                    <h3>Edamame (Spicy or regular)</h3>
+                    <p>5.95$</p>
+                    <h3>Info</h3>
+                    <p>Fresh edamame roasted and salted. Served spicy or regular.</p>
+                </div>
+                <!--end of edamame divs-->
+                <div id="miso">
+                    <h2>Click on the image to see pricing and ingredients</h2>
+                <figure style="position: absolute; left:50px; top:300px;">
+                    <img src="images/miso.jpg" width="200px" height="150px">
+                    <figcaption><button id="infobtn" class="misoinfo">Price/Info</button></figcaption>
+                </figure>
+                </div>
+                <div id="misoinfo" style="position: absolute; left:50px; top:300px;">
+                    <h3>Miso Soup</h3>
+                    <p>6.25$</p>
+                    <h3>Info</h3>
+                    <p>Fermented bean paste(Miso), fresh vegetables, chicken stock & tofu</p>
+                </div>
+                <!--end of miso divs-->
+                <div id="calamari">
+                    <h2>Click on the image to see pricing and ingredients</h2>
+                    <figure style="position: absolute; left:50px; top:300px;">
+                        <img src="images/calamari.jpg" width="200px" height="150px">
+                        <figcaption><button id="infobtn" class="calamariinfo">Price/Info</button></figcaption>
+                    </figure>
+                </div>
+                <div id="calamariinfo" style="position: absolute; left:50px; top:300px;">
+                    <h3>Calamari</h3>
+                    <p>11.95$</p>
+                    <h3>Info</h3>
+                    <p>Beer battered calamari served with tartar sauce</p>
+                </div>
+                <!--end of calamari divs-->
+                <div id="salad">
+                    <h2>Click on the image to see pricing and ingredients</h2>
+                    <figure style="position: absolute; left:50px; top:300px;">
+                        <img src="images/sea.jpg" width="200px" height="150px">
+                        <figcaption><button id="infobtn" class="saladinfo">Price/Info</button></figcaption>
+                    </figure>
+                </div>
+                <div id="saladinfo" style="position: absolute; left:50px; top:300px;">
+                    <h3>Seaweed Salad</h3>
+                    <p>4.25$</p>
+                    <h3>Info</h3>
+                    <p>Fresh sesame seaweed, red pepper flakes, cloud ear (kikurage) mushrooms</p>
+                </div>
+                <!--end of salad divs-->
+                <div id="egg">
+                    <h2>Click on the image to see pricing and ingredients</h2>
+                    <figure style="position: absolute; left:50px; top:300px;">
+                        <img src="images/eggroll.jpeg" width="200px" height="150px">
+                        <figcaption><button id="infobtn" class="egginfo">Price/Info</button></figcaption>
+                    </figure>
+                </div>
+                <div id="egginfo" style="position: absolute; left:50px; top:300px;">
+                    <h3>Pork eggrolls</h3>
+                    <p>11.95$</p>
+                    <h3>Info</h3>
+                    <p>Ground pork, cabbage, mix of veggies wrapped in a flour eggroll wrapper</p>
+                </div>
+                <!--div for hibachi menu-->
+                <div id="hibachimenu">
+                    <h2>Hibachi Time!</h2>
+                    <figure style="position: absolute;; left:50px; top:300px;">
+                        <img alt="chicken" src="images/chicken.jpg" width="200px" height="150px;"><figcaption><button id="btn1" class="grill">Hibachi chicken</button></figcaption>
+                    </figure>
+                    <figure style="position: absolute;; left:500px; top:300px;">
+                        <img alt="steak" src="images/steak.jpg" width="200px" height="150px;">
+                        <figcaption><button id="btn2" class="grill">Hibachi steak</button></figcaption>
+                    </figure>
+                    <figure style="position: absolute;; right:170px; top:300px;">
+                        <img alt="shrimp" src="images/shrimp.jpg" width="200px" height="150px;">
+                        <figcaption><button id="btn3" class="grill">hibachi shrimp</button></figcaption>
+                    </figure>
+                </div>
+                <!--divs for hibachi menu buttons(chicken, steak, shrimp)-->
+                <div id="chicken">
+                    <h2>Click on the image to see pricing and ingredients</h2>
+                    <figure style="position: absolute; left:50px; top:300px;">
+                        <img src="images/chicken.jpg" width="200px" height="150px">
+                    <figcaption><button id="infobtn" class="chickeninfo">Price/Info</button></figcaption>
+                    </figure>
+                </div>
+                <div id="chickeninfo" style="position: absolute; left:50px; top:300px;">
+                    <h3>Hibachi Chicken</h3>
+                    <p>19.95$</p>
+                    <h3>Info</h3>
+                    <p>Hibachi grilled chicken served with chicken fried rice and a fresh vegetable medley cooked before your eyes</p>
+                </div>
+                <div id="steak">
+                    <h2>Click on the image to see pricing and ingredients</h2>
+                    <figure style="position: absolute; left:50px; top:300px;">
+                        <img src="images/steak.jpg" width="200px" height="150px">
+                        <figcaption><button id="infobtn" class="steakinfo">Price/Info</button></figcaption>
+                    </figure>
+                </div>
+                <div id="steakinfo" style="position: absolute; left:50px; top:300px;">
+                    <h3>Hibachi Steak</h3>
+                    <p>26.95$</p>
+                    <h3>Info</h3>
+                    <p>Hibachi grilled steak served with chicken fried rice and a fresh vegetable medley cooked before your eyes</p>
+                </div>
+                <div id="shrimp">
+                    <h2>Click on the image to see pricing and ingredients</h2>
+                    <figure style="position: absolute; left:50px; top:300px;">
+                        <img src="images/shrimp.jpg" width="200px" height="150px">
+                        <figcaption><button id="infobtn" class="shrimpinfo">Price/Info</button></figcaption>
+                    </figure>
+                </div>
+                <div id="shrimpinfo" style="position: absolute; left:50px; top:300px;">
+                    <h3>Hibachi Shrimp</h3>
+                    <p>22.95$</p>
+                    <h3>Info</h3>
+                    <p>Hibachi grilled shrimp served with chicken fried rice and a fresh vegetable medley cooked before your eyes</p>
+                </div>
+                <!--end of shrimp divs-->
+            <!--happy hour main tab (snacks, drinks-->
+            <div id="hhour">
+                <h2>Happy Hour Selections</h2>
+                <h3>**Happy hour from 3-6pm Daily**</h3>
+                <figure style="position: absolute; left:50px; top:300px;">
+                    <img alt="drinks" src="images/hh.jpg" width="200px" height="150px;">
+                    <figcaption><button class="hhbtn" id="btn1">Drinks</figcaption>
+                </figure>
+                        <figure style="position: absolute; right:50px; top:300px;">
+                            <img alt="edamame" src="images/edamame.jpg" width="200px" height="150px;">
+                            <figcaption><button class="hhbtn" id="btn2" >Snacks</figcaption>
+                        </figure>
+            </div>
+            <!--div for hh drink-->
+            <div id="drinks">
+                <h2>Who called for alcohol?</h2>
+                <h3>**3$, 4$ and 5$ drinks from 3-6pm Daily**</h3>
+                <figure style="position: absolute;; left:50px; top:300px;">
+                    <img alt="beer" src="images/beer.jpg" width="200px" height="150px;"><figcaption><button id="btn1" class="drinks">3$ tap beers</button></figcaption>
+                </figure>
+                <figure style="position: absolute;; left:500px; top:300px;">
+                    <img alt="rails" src="images/rail.jpeg" width="200px" height="150px;">
+                    <figcaption><button id="btn2" class="drinks">4$ rails</button></figcaption>
+                </figure>
+                <figure style="position: absolute;; right:170px; top:300px;">
+                    <img alt="wine" src="images/wine.jpeg" width="200px" height="150px;">
+                    <figcaption><button id="btn3" class="drinks">5$ house wines</button></figcaption>
+                </figure>
+            </div>
+            <!--divs for drink buttons-->
+            <div id="beer">
+              <h2>Click on the image to see pricing and ingredients</h2>
+                <figure style="position: absolute; left:50px; top:300px;">
+                    <img src="images/beer.jpg" width="200px" height="150px">
+                    <figcaption><button id="infobtn" class="beerinfo">Price/Info</button></figcaption>
+                </figure>
+            </div>
+            <div id="beerinfo" style="position: absolute; left:50px; top:300px;">
+                <h3>3$ 16oz tap selections</h3>
+                <ul>
+                    <li>Coors Light</li>
+                    <li>Bud Light</li>
+                    <li>Grainbelt Nordeast</li>
+                    <li>Blue Moon</li>
+                    <li>McGolden</li>
+                    <li>Surly Furious</li>
+                    <li>Summit EPA</li>
+                    <li>Lagunitas</li>
+                </ul>
+            </div>
+            <!--end of beer divs-->
+            <div id="rails">
+                <h2>Click on the image to see pricing and ingredients</h2>
+                <figure style="position: absolute; left:50px; top:300px;">
+                    <img src="images/rail.jpeg" width="200px" height="150px">
+                    <figcaption><button id="infobtn" class="railinfo">Price/Info</button></figcaption>
+                </figure>
+            </div>
+            <div id="railinfo" style="position: absolute; left:50px; top:300px;">
+                <h3>4$ 2oz pours on rail liquors</h3>
+                <ul>
+                    <li>Vodka: New Amsterdam</li>
+                    <li>Gin: New Amsterdam </li>
+                    <li>Rum: Bacardi</li>
+                    <li>Whiskey: Evan Williams</li>
+                    <li>Tequila: Cuervo Gold</li>
+                </ul>
+            </div>
+            <!--end of rail divs-->
+            <div id="wine">
+                <h2>Click on the image to see pricing and ingredients</h2>
+                <figure style="position: absolute; left:50px; top:300px;">
+                <img src="images/wine.jpeg" width="200px" height="150px">
+                <figcaption><button id="infobtn" class="wineinfo">Price/Info</button></figcaption>
+            </div>
+            <div id="wineinfo" style="position: absolute; left:50px; top:300px;">
+                <h3>5$ 6oz house wine pours</h3>
+                <h4>All of our house brand selections are sponsored by & only featuring barefoot© products</h4>
+                <ul>
+                    <li>Moscato</li>
+                    <li>Pinot Grigio</li>
+                    <li>Chardonnay</li>
+                    <li>Sparkling Rose</li>
+                    <li>White Zinfindel</li>
+                    <li>Pinot Noir</li>
+                    <li>Cabernet</li>
+                    <li>Merlot</li>
+                </ul>
+            </div>
+            <!--end of wine divs-->
+            <!--div for hh snack-->
+            <div id="snacks">
+                <h2>Happy Hour Snacks</h2>
+                <h3>**1/2 off Appetizers from 3-6pm daily**</h3>
+                <figure style="position: absolute;; left:100px; top:300px;">
+                    <img class="else" alt="edamame" src="images/edamame.jpg" width="200px" height="150px;"><figcaption class="snacks">Edamame 3$</figcaption>
+                </figure>
+                <figure style="position: absolute;; left:400px; top:300px;">
+                    <img class="else" alt="dumpling" src="images/dumpling.jpg" width="200px" height="150px;">
+                    <figcaption class="snacks">Dumplings 6$</figcaption>
+                </figure>
+                <figure style="position: absolute;; right:100px; top:300px;">
+                    <img class="else" alt="eggroll" src="images/eggroll.jpeg" width="200px" height="150px;">
+                    <figcaption class="snacks">Eggrolls 6$</figcaption>
+                </figure>
+                <figure style="position: absolute;; right:400px; top:300px;">
+                    <img class="else" alt="calamari" src="images/calamari.jpg" width="200px" height="150px;">
+                    <figcaption class="snacks">Calamari 6$</figcaption>
+                </figure>
+            </div>
+                <!--locations main tab (LA, NYC, MIA)-->
+            <div id="locations">
+                <h2>Visit <em>Ornama©</em> Today!</h2>
+                <h3>Find your nearest location below</h3>
+                <figure style="position: absolute; left:170px; top:300px;">
+                    <img alt="new york" src="images/NYC.jpg" width="200px" height="150px;">
+                    <figcaption><button class= "cities" id="btn1">New York City</figcaption>
+                </figure>
+                <figure style="position: absolute;; left:550px; top:300px;">
+                    <img alt="los angeles" src="images/LA.webp" width="200px" height="150px;">
+                    <figcaption><button class="cities" id="btn2">Los Angeles</figcaption>
+                </figure>
+                <figure style="position: absolute;; right:170px; top:300px;">
+                    <img alt="miami" src="images/MIA.jpeg" width="200px" height="150px;">
+                    <figcaption><button class="cities" id="btn3">Miami</figcaption>
+                </figure>
+            </div>
+            <div id="nyc">
+                <h2><b>New York City</b></h2>
+                <h3><i>Manhattan</i></h3>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <h4>Address</h4>
+                <p>
+                    200 W 4th St<br/>
+                    New York, NY<br/>
+                    10036
+                </p>
+                <br/>
+                <br/>
+                <br/>
+                <h4>Phone</h4>
+                <p>(718)-123-4567</p>
+                <br/>
+                <br/>
+                <br/>
+                <h4>Email</h4>
+                <p>nyvenue@ornama.com</p>
+                <img id="cityimage" src="images/NYC.jpg" style="position: absolute; left:20px; top:165px;" width="500px" height="450px">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2068872960654!2d-73.98879834921111!3d40.75747417922552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25854faa8d447%3A0x283647d8bf18f932!2s200%20W%2044th%20St%2C%20New%20York%2C%20NY%2010036!5e0!3m2!1sen!2sus!4v1608005143136!5m2!1sen!2sus" width="500px" height="450px" style="position: absolute; right:20px; top:165px;" frameborder="0" style="border:5px solid white;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div id="la">
+                <h2><b>Los Angeles</b></h2>
+                <h3><i>Beverly Hills</i></h3>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <h4>
+                   Address
+                </h4>
+                <p>
+                468 N Bedford Dr<br/>
+                Beverly Hills, CA<br/>
+                90210
+                </p>
+                <br/>
+                <br/>
+                <br/>
+                <h4>Phone</h4>
+                <p>(310)-098-7654</p>
+                <br/>
+                <br/>
+                <br/>
+                <h4>Email</h4>
+                <p>bhvenue@ornama.com</p>
+                <img class="cityimage" src="images/LA.webp" width="500px" height="450px" style="position: absolute; left:20px; top:165px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.0142063593275!2d-118.4082335494206!3d34.06915008050619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc083e201d39%3A0xa1a893be97a48e32!2s468%20N%20Bedford%20Dr%2C%20Beverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1608005320070!5m2!1sen!2sus" width="500px" height="450px" style="position: absolute; right:20px; top:165px;" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div id="mia">
+                <h2><b>Miami</b></h2>
+                <h3><i>South Beach</i></h3>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <h4>Address</h4>
+                <p>
+                    1 Ocean Dr<br/>
+                    Miami Beach, FL<br/>
+                    33139
+                </p>
+                <br/>
+                <br/>
+                <br/>
+                <h4>Phone</h4>
+                <p>
+                    (305)-765-4321
+                </p>
+                <br/>
+                <br/>
+                <br/>
+                <h4>
+                    Email
+                </h4>
+                <p>miavenue@ornama.com</p>
+                <img class="cityimage" src="images/MIA.jpeg" width="500px" height="450px" style="position: absolute; left:20px; top:165px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.047426926472!2d-80.13454104963414!3d25.768996983553052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b4f1c26fd0c3%3A0xb4974cd7e02c514!2s1%20Ocean%20Dr%2C%20Miami%20Beach%2C%20FL%2033139!5e0!3m2!1sen!2sus!4v1608005371551!5m2!1sen!2sus" width="500px" height="450px" style="position: absolute; right:20px; top:165px;" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+
+        </section>
+        <footer>
+                <a href="index.html">Home</a>
+                <!--<a href="menu.html">Dining</a>
+                <a href="hh.html">Specials</a>
+                <a href="locations.html">Find Us</a>-->
+        </footer>
+    </div>
 
 
 
 
-    
-    <script src="js/script.js"></script> 
+
+
+        <script src="js/script.js"></script> 
 </body>
 </html>
