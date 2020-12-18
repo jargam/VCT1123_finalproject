@@ -1,0 +1,61 @@
+*,body,html{
+    margin: 0;
+    padding: 0;
+}
+#content{
+    width: 100vw;
+    height: 100vh;
+    background-color:#F2BC79;
+}
+header, footer{
+    height: 10vh;
+    width: 100%;
+    background-color: #485059;
+}
+footer{
+    background-color: #BF9A84;
+    font-size: 60px;
+    text-align: center;
+}
+section{
+    height: 80vh;
+    width: 100%;
+}
+h1, footer{
+    color:#D9BCA3;
+    margin: auto;
+    position: relative;
+}
+h2{
+    text-align: center;
+    color: #485059;
+    font-size: 80px;
+}
+h3, h4, p{
+    text-align: center;
+}
+}
+#links{
+    width: 100%;
+    font-size: 30px;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+}
+.href{
+    color: #132c99;
+}
+#menu, #hhour, #locations, #sushimenu, #appmenu, #hibachimenu, #snacks, #drinks, #nyc, #la, #mia, #caliroll, #veggieroll, #spicytuna, #pork, #edamame, #miso, #calamari, #salad, #egg, #chicken, #steak, #shrimp, #beer, #wine, #rails, #calirollinfo, #vegrollinfo, #tunarollinfo, #dumplinginfo, #edamameinfo, #misoinfo, #calamariinfo, #saladinfo, #egginfo, #chickeninfo, #steakinfo, #shrimpinfo, #beerinfo, #railinfo, #wineinfo{
+    display: none;
+}
+figcaption.snacks{
+    margin-left: 70px;
+    margin-right: 70px;
+}
+img#cityimage{
+    border: none;
+}
+figcaption{
+ text-align: center;
+ margin-left: 25px;
+}
